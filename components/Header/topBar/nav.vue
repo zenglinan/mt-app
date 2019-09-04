@@ -20,7 +20,6 @@
   align-items: center;
   .navItem {
     height: 40px;
-    box-sizing: border-box;
     padding: 12px 14px;
     &:hover {
       background-color: #fff;

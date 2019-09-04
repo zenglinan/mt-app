@@ -2,7 +2,23 @@ a {
   text-decoration: none;
   color: #666;
 }
-*{
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+button {
+  outline: none;
+  border: none;
 }

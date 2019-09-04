@@ -30,14 +30,9 @@
     box-sizing: border-box;
   }
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    margin: 0;
-  }
   .el-header {
     padding: 0;
+    height: auto !important;
   }
 
   .icon {
