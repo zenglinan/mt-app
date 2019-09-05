@@ -32,6 +32,9 @@
       border-radius: 4px 0 0 4px;
       background: transparent;
       border: 1px solid #E5E5E5;
+      &::placeholder {
+        color: #999;
+      }
     }
 
     button.search {

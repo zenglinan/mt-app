@@ -12,7 +12,7 @@
 
 <script>
   import City from './city'
-  import Nav from './nav'
+  import Nav from './nav/index'
   import User from './user'
   export default {
     name: 'index',
@@ -32,6 +32,7 @@
     justify-content: space-between;
     background-color: rgb(248,248,248);
     padding: 0 36px;
+    position: relative;
     .barLeft {
       display: flex;
       align-items: center;

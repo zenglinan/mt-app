@@ -22,12 +22,10 @@
 
 <style scoped lang="scss">
   .m-search {
-
+    color: #999;
     padding-top: 28px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
-
   }
 </style>
