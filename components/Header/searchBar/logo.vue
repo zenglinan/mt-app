@@ -1,6 +1,6 @@
 <template>
   <div class="m-logo">
-    <img src="../../../assets/img/logo.png" alt="美团网">
+    <img src="../../../static/img/logo.png" alt="美团网">
   </div>
 </template>
 

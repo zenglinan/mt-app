@@ -1,125 +1,38 @@
 <template>
   <div class="m-nav">
     <ul class="navList" ref="navList">
-      <li class="nav">
-        <nuxt-link class="navItem hoverable" to="#">我的美团</nuxt-link>
+      <li class="nav" v-for="(item,index) in navData" :key="index">
+        <nuxt-link class="navItem hoverable" to="#"
+                   :class="{isLeaf: !item.list}"
+        >
+          {{item.title}}
+        </nuxt-link>
         <dl class="hidden">
-          <dd>
-            <nuxt-link class="hoverable" to="#">我的订单</nuxt-link>
+          <dd v-for="(list,index) in item.list" :key="index">
+            <nuxt-link class="hoverable" to="#">{{list}}</nuxt-link>
           </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">我的收藏</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">抵用券</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">账户设置</nuxt-link>
-          </dd>
-        </dl>
-      </li>
-      <li class="nav">
-        <nuxt-link class="navItem hoverable" to="#">手机APP</nuxt-link>
-      </li>
-      <li class="nav">
-        <nuxt-link class="navItem hoverable" to="#">商家中心</nuxt-link>
-        <dl class="hidden">
-          <dd>
-            <nuxt-link class="hoverable" to="#">登录商家中心</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">美团智能收银</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">我想合作</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">手机免费开店</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">餐饮代理商招募</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">商家申请开票</nuxt-link>
-          </dd>
-          <dd>
-            <nuxt-link class="hoverable" to="#">免费合作美团排队</nuxt-link>
-          </dd>
-        </dl>
-      </li>
-      <li class="nav">
-        <nuxt-link class="navItem hoverable" to="#">美团规则</nuxt-link>
-        <dl class="hidden">
-          <dd>规则中心</dd>
-          <dd>规则目录</dd>
-          <dd>规则评议院</dd>
         </dl>
       </li>
       <li class="nav">
         <nuxt-link class="navItem hoverable" to="#">网站导航</nuxt-link>
         <div class="card hidden">
-          <div class="contentItem">
+          <div class="contentItem" v-for="(data, index) in cardData" :key="index">
             <dl>
-              <dt>酒店旅游</dt>
-              <dd class="hoverable">国际机票</dd>
-              <dd class="hoverable">火车票</dd>
-              <dd class="hoverable">榛果民宿</dd>
-              <dd class="hoverable">经济型酒店</dd>
-              <dd class="hoverable">主题酒店</dd>
-              <dd class="hoverable">商务酒店</dd>
-              <dd class="hoverable">公寓</dd>
-              <dd class="hoverable">豪华酒店</dd>
-              <dd class="hoverable">客栈</dd>
-              <dd class="hoverable">青年旅社</dd>
-              <dd class="hoverable">度假酒店</dd>
-              <dd class="hoverable">别墅</dd>
-              <dd class="hoverable">农家院</dd>
-            </dl>
-          </div>
-          <div class="contentItem">
-            <dl>
-              <dt>吃美食</dt>
-              <dd class="hoverable">烤鱼</dd>
-              <dd class="hoverable">特色小吃</dd>
-              <dd class="hoverable">烧烤</dd>
-              <dd class="hoverable">自助餐</dd>
-              <dd class="hoverable">火锅</dd>
-              <dd class="hoverable">代金券</dd>
-            </dl>
-          </div>
-          <div class="contentItem">
-            <dl>
-              <dt>看电影</dt>
-              <dd class="hoverable">热映电影</dd>
-              <dd class="hoverable">热门影院</dd>
-              <dd class="hoverable">热映电影口碑榜</dd>
-              <dd class="hoverable">最受期待电影</dd>
-              <dd class="hoverable">国内票房榜</dd>
-              <dd class="hoverable">北美票房榜</dd>
-              <dd class="hoverable">电影排行榜</dd>
+              <dt>{{data.title}}</dt>
+              <dd v-for="(listItem, index) in data.list" :key="index">
+                <nuxt-link class="hoverable" to="#">{{listItem}}</nuxt-link>
+              </dd>
+
             </dl>
           </div>
           <div class="contentItem">
             <dl>
               <dt>手机应用</dt>
-              <dd>
-                <nuxt-link to="#"><img src="../../../../assets/img/meituan.png" alt=""></nuxt-link>
-              </dd>
-              <dd>
-                <nuxt-link to="#"><img src="../../../../assets/img/waimai.png" alt=""></nuxt-link>
-              </dd>
-              <dd>
-                <nuxt-link to="#"><img src="../../../../assets/img/zhenguo.png" alt=""></nuxt-link>
-              </dd>
-              <dd>
-                <nuxt-link to="#"><img src="../../../../assets/img/dianping.png" alt=""></nuxt-link>
-              </dd>
-              <dd>
-                <nuxt-link to="#"><img src="../../../../assets/img/maoyan.png" alt=""></nuxt-link>
+              <dd v-for="(img, index) in images" :key="index">
+                <nuxt-link to="#"><img :src="img.src" :alt="img.alt"></nuxt-link>
               </dd>
             </dl>
           </div>
-
         </div>
       </li>
     </ul>
@@ -128,27 +41,56 @@
 
 <script>
   import card from './card'
+  import { images, cardData, navData } from './data'
 
   export default {
     name: 'navigation',
+    data() {
+      return {
+        images,
+        cardData,
+        navData
+      }
+    },
     components: {
       'm-card': card
     },
     mounted() {
       const navItem = this.$refs.navList.querySelectorAll('.navItem')
-      navItem.forEach(item => {
+      for (let i = 0, len = navItem.length; i < len; i++) {
+        const item = navItem[i]
+        const list = item.nextElementSibling
+        const listClasses = list.classList
+        const itemClasses = item.classList
+        if (itemClasses.contains('isLeaf')) continue
+        this.bindEvents({item, list, listClasses, itemClasses})
+      }
+    },
+    methods: {
+      hide(itemClasses, listClasses) {
+        itemClasses.remove('active')
+        listClasses.add('hidden')
+      },
+      show(itemClasses, listClasses) {
+        itemClasses.add('active')
+        listClasses.remove('hidden')
+      },
+      bindEvents({item, list, listClasses, itemClasses}){
         item.addEventListener('mouseenter', () => {
-          item.classList.add('active')
-          item.nextElementSibling && item.nextElementSibling.classList.remove('hidden')
+          this.show(itemClasses, listClasses)
         })
         item.addEventListener('mouseleave', () => {
-          item.classList.remove('active')
+          let timer = setTimeout(() => {
+            this.hide(itemClasses, listClasses)
+          }, 10)
+          list.addEventListener('mouseenter', () => {
+            clearTimeout(timer)
+          })
+          list.addEventListener('mouseleave', () => {
+            this.hide(itemClasses, listClasses)
+          })
         })
-        this.$refs.navList.addEventListener('mouseleave', () => {
-          item.nextElementSibling && item.nextElementSibling.classList.add('hidden')
-        })
-      })
-
+      }
     }
   }
 </script>
@@ -222,6 +164,7 @@
             dd {text-align: center;padding: 12px 10px;}
           }
         }
+
         &:nth-child(3) {
           dl {width: 150%;
 
