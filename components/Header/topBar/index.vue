@@ -12,7 +12,7 @@
 
 <script>
   import City from './city'
-  import Nav from './nav/index'
+  import Nav from './nav'
   import User from './user'
   export default {
     name: 'index',

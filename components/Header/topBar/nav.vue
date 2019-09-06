@@ -40,8 +40,7 @@
 </template>
 
 <script>
-  import card from './card'
-  import { images, cardData, navData } from './data'
+  import { images, cardData, navData } from './navData'
 
   export default {
     name: 'navigation',
@@ -51,9 +50,6 @@
         cardData,
         navData
       }
-    },
-    components: {
-      'm-card': card
     },
     mounted() {
       const navItem = this.$refs.navList.querySelectorAll('.navItem')
@@ -82,7 +78,7 @@
         item.addEventListener('mouseleave', () => {
           let timer = setTimeout(() => {
             this.hide(itemClasses, listClasses)
-          }, 10)
+          }, 40)
           list.addEventListener('mouseenter', () => {
             clearTimeout(timer)
           })
