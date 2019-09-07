@@ -87,7 +87,7 @@
       }
 
       &.search {
-        dd {cursor: pointer;padding: 8px 10px;
+        dd {cursor: pointer;padding: 8px 10px;color: #666;
 
           &:hover {background-color: rgb(248, 248, 248);}
 

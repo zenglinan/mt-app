@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: #666;
+  color: inherit;
 }
 
 *,
@@ -21,4 +21,9 @@ input {
 button {
   outline: none;
   border: none;
+}
+ul, ol{
+  li{
+    list-style: none;
+  }
 }

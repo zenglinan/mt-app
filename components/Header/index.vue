@@ -21,5 +21,7 @@
   .m-header{
     font-size: 12px;
     color: #666;
+    background: #fff;
+    box-shadow: 0 10px 27px 0 rgba(0,0,0,0.10);
   }
 </style>

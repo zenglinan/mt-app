@@ -3,8 +3,7 @@
     <div class="city">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#i-location"></use>
-      </svg>
-      <span>广州</span>
+      </svg><span>广州</span>
     </div>
     <div class="changeCity">
       <nuxt-link to="#" class="hoverable">切换城市</nuxt-link>
@@ -34,6 +33,8 @@
     align-items: center;
 
     .city {
+      display: flex;
+      align-items: center;
       svg {
         width: 1.2em;
         height: 1.2em;

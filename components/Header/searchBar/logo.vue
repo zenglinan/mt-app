@@ -12,10 +12,12 @@
 
 <style scoped lang="scss">
   .m-logo {
+    position: absolute;
+    left: 0;
+    top: 28px;
     margin-left: 36px;
-    padding-top: 28px;
-    padding-bottom: 40px;
     img {
+      float: left;
       width: 126px;
       height: 46px;
     }

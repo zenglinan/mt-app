@@ -1,5 +1,5 @@
 <template>
-  <div class="m-searchBar">
+  <div class="m-searchBar clearfix">
     <m-logo></m-logo>
     <m-search></m-search>
   </div>
@@ -18,7 +18,7 @@
 </script>
 
 <style scoped lang="scss">
-  .m-searchBar{
-    display: flex;
-  }
+.m-searchBar{
+  position: relative;
+}
 </style>

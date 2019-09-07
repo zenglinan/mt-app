@@ -96,7 +96,7 @@
 
     ul.navList {display: flex;
 
-      li.nav {list-style: none;position: relative;height: 40px;
+      li.nav {position: relative;height: 40px;color: #999;
 
         .card {width: 1200px;position: absolute;top: 40px;
           right: 0;background-color: #fff;border-color: #E5E5E5;
