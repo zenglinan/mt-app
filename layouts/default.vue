@@ -6,7 +6,8 @@
     <main class="main">
       <nuxt/>
     </main>
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+    </footer>
   </div>
 </template>
 <script>
