@@ -1,0 +1,118 @@
+.food {
+  color: #FF8200;
+
+  &:before {
+    content: "\e622";
+  }
+}
+
+.takeout {
+  color: #FFB500;
+
+  &:before {
+    content: "\e630";
+  }
+}
+
+.hotel {
+  color: #9B5E3E;
+
+  &:before {
+    content: "\e62a";
+  }
+}
+
+.homestay {
+  color: #FFB500;
+
+  &:before {
+    content: "\e631";
+  }
+}
+
+.movie {
+  color: #FF3D00;
+  &:before {
+    content: "\e62c";
+    position: relative;
+    left: -2px;
+  }
+}
+
+.airport {
+  color:#03A9F4;
+  &:before {
+    content: "\e632";
+  }
+}
+
+.ktv {
+  color:#00BF96;
+  &:before {
+    content: "\e627";
+  }
+}
+
+.life {
+  color:#00BF96;
+  &:before {
+    content: "\e633";
+  }
+}
+
+.hair {
+  color:#FF4081;
+  &:before {
+    content: "\e626";
+    transform: scale(0.7);
+  }
+}
+
+.marry {
+  color:#FF4081;
+  &:before {
+    content: "\e629";
+  }
+}
+
+.offspring {
+  color:#FF4081;
+  &:before {
+    content: "\e623";
+  }
+}
+
+.sport {
+  color: #03A9F4;
+  &:before {
+    content: "\e62b";
+  }
+}
+
+.furniture {
+  color: #00BF96;
+  &:before {
+    content: "\e625";
+  }
+}
+
+.study {
+  color: #00BF96;
+  &:before {
+    content: "\e624";
+  }
+}
+
+.health {
+  color: #03A9F4;
+  &:before {
+    content: "\e628";
+  }
+}
+
+.bar {
+  color: #00BF96;
+  &:before {
+    content: "\e621";
+  }
+}

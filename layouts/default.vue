@@ -18,7 +18,7 @@
     }
   }
 </script>
-<style>
+<style lang="scss" scoped>
   html {
     font-family: "-apple-system","BlinkMacSystemFont","Roboto","Helvetica Neue","MIcrosoft YaHei",sans-serif !important;
     font-size: 16px;
@@ -34,7 +34,9 @@
     padding: 0;
     height: auto !important;
   }
-
+  .el-main {
+    padding: 0;
+  }
   .icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
