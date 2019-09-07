@@ -16,7 +16,7 @@
 </script>
 
 <style scoped lang="scss">
-.m-link {padding: 30px 0;display: flex;
+.m-link {padding: 30px 0 20px 0;display: flex;
   li {padding: 0 22px;color: #222;font-weight: bold;font-size: 16px;
     a {white-space: nowrap;}
     &:nth-child(1){

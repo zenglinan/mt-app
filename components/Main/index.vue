@@ -15,6 +15,4 @@
 </script>
 
 <style scoped lang="scss">
-  .m-main{}
-
 </style>

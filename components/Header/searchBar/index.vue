@@ -20,6 +20,5 @@
 <style scoped lang="scss">
 .m-searchBar{
   position: relative;
-  z-index: 10;
 }
 </style>

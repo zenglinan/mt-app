@@ -8,15 +8,14 @@
         </el-menu-item>
       </el-menu>
     </el-aside>
-    <el-container class="card" v-show="onShow">
+    <el-container class="card">
       <el-main>
-        <template v-for="item in menu" v-show="">
-          <dl v-for="(child, idx) in item.child" :key="idx">
-            <dt>{{child.title}}</dt>
-            <dd v-for="(childContent, idx) in child.child" :key="idx">{{childContent}}</dd>
+        <template v-for="menuItem in menu" v-show="">
+          <dl v-for="(childMenu, idx) in menuItem.child" :key="idx">
+            <h3>{{childMenu.title}}</h3>
+            <dd v-for="(content, id) in childMenu.child" :key="id">{{content}}</dd>
           </dl>
         </template>
-
       </el-main>
     </el-container>
   </el-container>
@@ -30,12 +29,12 @@
     data() {
       return {
         menu,
-        hasEnterMenu: false
+        inMenu: false
       }
     },
     computed: {
       onShow(){
-        return this.hasEnterMenu
+        return this.inMenu
       }
     }
   }
@@ -45,9 +44,12 @@
   @import "@/assets/scss/fontClass.scss";
 
   .m-menu {
+    transform: translateY(-50px);
+    margin-left: 36px;
     .el-aside {
       width: 230px;
       border: 1px solid #E5E5E5;
+
 
       h3 {
         padding: 15px 0 20px 15px;

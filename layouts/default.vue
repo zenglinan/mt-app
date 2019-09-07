@@ -1,13 +1,13 @@
 <template>
-  <el-container>
-    <el-header>
+  <div class="container">
+    <header>
       <m-header></m-header>
-    </el-header>
-    <el-main>
+    </header>
+    <main class="main">
       <nuxt/>
-    </el-main>
-    <el-footer>Footer</el-footer>
-  </el-container>
+    </main>
+    <footer class="footer">Footer</footer>
+  </div>
 </template>
 <script>
   import header from '@/components/Header/index'
@@ -33,9 +33,13 @@
   .el-header {
     padding: 0;
     height: auto !important;
+    position: relative;
+    z-index: 10;
   }
   .el-main {
     padding: 0;
+    position: relative;
+    z-index: 99;
   }
   .icon {
     width: 1em; height: 1em;
