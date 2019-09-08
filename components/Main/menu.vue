@@ -45,15 +45,16 @@
 
   .m-menu {
     flex-grow: 0;
-
+    transform: translateY(-45px);
+    height: 474px;
     .el-aside {
       width: 230px;
       border: 1px solid #E5E5E5;
-      transform: translateY(-50px);
       margin-left: 36px;
 
       h3 {
         padding: 15px 0 20px 15px;
+        height: 57px;
       }
 
       .el-menu-item {

@@ -7,7 +7,7 @@
 
 <script>
   import menu from './menu'
-  import banner from './banner'
+  import banner from './banner/banner'
   export default {
     name: 'm-main',
     components:{
@@ -20,5 +20,6 @@
 <style scoped lang="scss">
   .m-main{
     display: flex;
+    align-items: flex-start;
   }
 </style>
