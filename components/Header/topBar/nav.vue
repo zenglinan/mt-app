@@ -59,7 +59,7 @@
         const listClasses = list.classList
         const itemClasses = item.classList
         if (itemClasses.contains('isLeaf')) continue
-        this.bindEvents({item, list, listClasses, itemClasses})
+        this.bindEvents({ item, list, listClasses, itemClasses })
       }
     },
     methods: {
@@ -71,7 +71,7 @@
         itemClasses.add('active')
         listClasses.remove('hidden')
       },
-      bindEvents({item, list, listClasses, itemClasses}){
+      bindEvents({ item, list, listClasses, itemClasses }) {
         item.addEventListener('mouseenter', () => {
           this.show(itemClasses, listClasses)
         })
@@ -101,7 +101,7 @@
         .card {width: 1200px;position: absolute;top: 40px;
           right: 0;background-color: #fff;border-color: #E5E5E5;
           box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-          padding: 30px 36px 36px 47px;display: flex;z-index: 2;
+          padding: 30px 36px 36px 47px;display: flex;z-index: 11;
 
           .contentItem:nth-child(1) {
             dl {width: 247px;}
