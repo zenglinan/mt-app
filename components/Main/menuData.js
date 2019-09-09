@@ -25,6 +25,9 @@ const menuData = [{
   child:[{
     title:'酒店星级',
     child:['经济型','舒适/三星','高档/四星','豪华/五星']
+  },{
+    title:"热门房源",
+    child: ['别墅','海景房']
   }]
 },{
   type:'movie',
