@@ -1,5 +1,5 @@
 <template>
-  <div class="panel-card">
+  <nuxt-link tag="div" to="#" class="panel-card">
     <div class="content">
       <img :src="detail.img.src" :alt="detail.img.alt"
            :style="{width: detail.img.width, height: detail.img.height}">
@@ -10,7 +10,7 @@
       <p>￥<span>{{detail.price}}</span></p>
       <slot></slot>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
