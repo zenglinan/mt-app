@@ -1,6 +1,6 @@
 <template>
   <div class="m-logo">
-    <img src="../../../static/img/logo.png" alt="美团网">
+    <nuxt-link to="/"><img src="../../../static/img/logo.png" alt="美团网"></nuxt-link>
   </div>
 </template>
 
