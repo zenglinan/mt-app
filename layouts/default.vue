@@ -7,15 +7,18 @@
       <nuxt/>
     </main>
     <footer class="footer">
+      <m-footer></m-footer>
     </footer>
   </div>
 </template>
 <script>
   import header from '@/components/Header/index'
+  import footer from '@/components/Footer/index'
 
   export default {
     components: {
-      'm-header': header
+      'm-header': header,
+      'm-footer': footer
     }
   }
 </script>
