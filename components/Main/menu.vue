@@ -11,10 +11,13 @@
     </div>
     <div class="card" v-show="onShow" ref="card">
       <div class="detail" v-for="(item, idx) in menu[hoverIndex || 0].child" :key="idx">
-        <h3>{{item.title}}</h3>
+        <header>
+          <nuxt-link to="#" class="title">{{item.title}}</nuxt-link>
+          <nuxt-link to="#" class="more">更多 ></nuxt-link>
+        </header>
         <dl>
           <dd v-for="(t,idx) in item.child" :key="idx">
-            {{t}}
+            <nuxt-link to="#" class="hoverable">{{t}}</nuxt-link>
           </dd>
         </dl>
       </div>
@@ -95,11 +98,41 @@
     .card {
       width: 400px;
       height: 416px;
+      padding: 30px;
       background-color: #fff;
       position: absolute;
       left: 227px;
       top: 57px;
       z-index: 99;
+      .detail {
+        margin-bottom: 30px;
+        header{
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #e5e5e5;;
+          .title{
+            font-size: 16px;
+            font-weight: normal;
+            color: #222;
+            padding-bottom: 10px;
+          }
+          .more{
+            font-size: 12px;
+            color: #999;
+          }
+        }
+
+        dl{
+          display: flex;
+          flex-wrap: wrap;
+          dd{
+            margin-right: 16px;
+            margin-top: 10px;
+            color: #999;
+            font-size: 12px;
+          }
+        }
+      }
 
     }
   }
