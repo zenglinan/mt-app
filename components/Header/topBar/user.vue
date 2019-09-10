@@ -1,7 +1,7 @@
 <template>
   <div class="m-user">
-    <div class="login">立即登录</div>
-    <div class="hoverable logout">注册</div>
+    <nuxt-link class="login" to="signIn">立即登录</nuxt-link>
+    <nuxt-link class="hoverable logout" to="register">注册</nuxt-link>
   </div>
 </template>
 
@@ -17,7 +17,7 @@
     align-items: center;
     margin-left: 15px;
 
-    > div {
+    > a {
       margin-left: 10px;
     }
 
