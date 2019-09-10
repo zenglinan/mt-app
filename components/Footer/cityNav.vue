@@ -98,7 +98,7 @@
 
 <style scoped lang="scss">
   .cityNav{
-    margin: 40px 36px 0;
+    margin: 40px 0;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
     h3{
